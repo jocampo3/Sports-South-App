@@ -12,10 +12,6 @@ class InvoiceWindow(QWidget):
     def initUI(self):
         self.setWindowTitle('Invoices')
         layout = QVBoxLayout()
-        # self.label = QLabel('This is the second window', self)
-        # layout.addWidget(self.label)
-
-        #customer_number, username, password, invoice_num, source
 
         # Widget 1 - Customer Number Input
         self.customer_input = QLineEdit(self)
@@ -41,7 +37,7 @@ class InvoiceWindow(QWidget):
         self.password_label = QLabel(self)
         layout.addWidget(self.password_label)
 
-        # Widget 4 - Source Input
+        # Widget 4 - Invoice Number Input
         self.invoice_input = QLineEdit(self)
         self.invoice_input.setPlaceholderText('Enter invoice number')
         layout.addWidget(self.invoice_input)
@@ -49,7 +45,7 @@ class InvoiceWindow(QWidget):
         self.invoice_label = QLabel(self)
         layout.addWidget(self.invoice_label)
 
-        # Widget 5 - Start Date Input
+        # Widget 5 - Source Input
         self.source_input = QLineEdit(self)
         self.source_input.setPlaceholderText('Enter your source')
         layout.addWidget(self.source_input)
@@ -181,23 +177,23 @@ class MainWindow(QWidget):
         self.password_label = QLabel(self)
         layout.addWidget(self.password_label)
 
-        # Widget 5 - Start Date Input
+        # Widget 4 - Start Date Input
         self.start_date_input = QLineEdit(self)
-        self.start_date_input.setPlaceholderText('Enter your start date')
+        self.start_date_input.setPlaceholderText('Enter your start date [YYYY-MM-DD]')
         layout.addWidget(self.start_date_input)
 
         self.start_date_label = QLabel(self)
         layout.addWidget(self.start_date_label)
 
-        # Widget 6 - End Date Input
+        # Widget 5 - End Date Input
         self.end_date_input = QLineEdit(self)
-        self.end_date_input.setPlaceholderText('Enter your end date')
+        self.end_date_input.setPlaceholderText('Enter your end date [YYYY-MM-DD]')
         layout.addWidget(self.end_date_input)
 
         self.end_date_label = QLabel(self)
         layout.addWidget(self.end_date_label)
 
-        # Widget 4 - Source Input
+        # Widget 6 - Source Input
         self.source_input = QLineEdit(self)
         self.source_input.setPlaceholderText('Enter your source')
         layout.addWidget(self.source_input)
